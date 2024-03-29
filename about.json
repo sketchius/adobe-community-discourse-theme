@@ -10,15 +10,15 @@
   },
   "color_schemes": {
     "Light": {
-      "primary": "222222",
+      "primary": "4b4b4b",
       "secondary": "ffffff",
-      "tertiary": "0088cc",
-      "quaternary": "e45735",
-      "header_background": "ffffff",
-      "header_primary": "333333",
+      "tertiary": "1473E6",
+      "quaternary": "1473E6",
+      "header_background": "FFFFFF",
+      "header_primary": "707070",
       "highlight": "ffff4d",
       "danger": "e45735",
-      "success": "009900",
+      "success": "44B556",
       "love": "fa6c8d"
     }
   }
