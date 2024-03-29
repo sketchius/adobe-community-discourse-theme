@@ -2,4 +2,4 @@
 
 **Theme Summary**
 
-For more information, please see: **url to meta topic**
+This Discourse Theme is designed and developed as an imaginary migration of the [Adobe Community forum](https://community.adobe.com/) to the Discourse platform.
