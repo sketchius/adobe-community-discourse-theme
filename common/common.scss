@@ -1,5 +1,11 @@
 * {
   --d-max-width: 950px;
+  font-family: "Ubuntu", "Times New Roman", Times, serif !important;
+  letter-spacing: -0.2px;
+}
+
+p {
+  letter-spacing: 0;
 }
 
 .category-boxes {

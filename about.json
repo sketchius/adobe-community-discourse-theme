@@ -5,7 +5,8 @@
   "license_url": "TODO: Put your theme's LICENSE URL here",
   "theme_version": "0.0.1",
   "assets": {
-    "discussions": "assets/S2_Icon_conversations-icon.svg"
+    "discussions": "assets/S2_Icon_conversations-icon.svg",
+    "ubuntu": "assets/Ubuntu-Medium.ttf"
   },
   "modifiers": {
   },
