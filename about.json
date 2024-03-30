@@ -8,6 +8,9 @@
     "discussions": "assets/S2_Icon_conversations-icon.svg",
     "ubuntu": "assets/Ubuntu-Medium.ttf"
   },
+  "components": [
+    "https://github.com/discourse/discourse-header-search"
+  ],
   "modifiers": {
   },
   "color_schemes": {
