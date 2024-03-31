@@ -90,6 +90,74 @@ p {
   color: #4b4b4b;
 }
 
+.search-banner {
+  background-position: center;
+  .custom-search-banner {
+    height: 250px;
+    .custom-search-banner-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 46px 0 0 0 !important;
+      & > div {
+        width: 408px;
+        max-width: 408px;
+      }
+      h1 {
+        font-size: 26px;
+        letter-spacing: -0.2px;
+        color: var(--secondary);
+        margin-top: 20px;
+      }
+      .btn.search-icon:not(.has-search-button-text) {
+        left: 8px;
+      }
+      .search-input {
+        background: none;
+        border: none;
+        padding: 0 !important;
+        input {
+          background: white !important;
+          border: none;
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.35);
+          border-radius: 16px;
+        }
+        .searching {
+          position: absolute;
+          right: 16px;
+        }
+        input#search-term[type="text"] {
+          padding: 1px 46px;
+          height: 33px;
+        }
+      }
+      .custom-stats {
+        max-width: none;
+        width: auto;
+        .stat-banner__wrapper {
+          background: none;
+          padding: 0;
+        }
+        ul {
+          display: flex;
+          gap: 20px;
+          li {
+            & > * {
+              gap: 4px;
+            }
+            span:first-child,
+            span:last-child {
+              font-size: 14px;
+              color: var(--secondary);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (width < 960px) {
   .category-boxes {
     grid-template-columns: 1fr 1fr 1fr;
