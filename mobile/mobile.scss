@@ -1,0 +1,121 @@
+body {
+  overflow: hidden;
+}
+
+.search-banner .custom-search-banner .custom-search-banner-wrap {
+  h1 {
+    font-size: 30px;
+    margin-top: 4px;
+  }
+  .search-menu {
+    width: 300px;
+    .search-icon .d-icon-search {
+      font-size: 20px;
+    }
+  }
+  .search-input {
+    input#search-term[type="text"] {
+      height: 50px;
+      border-radius: 32px;
+    }
+    .searching {
+      top: 25%;
+    }
+  }
+}
+
+.custom-stats {
+  display: none;
+}
+
+#main-outlet {
+  margin: 0 12px;
+}
+
+.section-heading {
+  z-index: 1;
+  margin: 0;
+}
+
+.featured-categories-wrapper .featured-categories-slider {
+  overflow: unset;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.category-list-heading,
+.list-controls,
+.list-container {
+  padding: 0 16px;
+}
+
+.category-list-heading {
+  margin-top: 12px;
+}
+
+.category-list.with-topics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 16px;
+  column-gap: 12px;
+  .category-list-item {
+    border: none !important;
+    margin: 0;
+    padding: 0;
+    height: 120px;
+    &.category h3 {
+      padding-left: 14px;
+    }
+    .category-title-link {
+      margin: 0;
+      flex-direction: column-reverse;
+      .category-text-title {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        .category-name {
+          font-size: 13px;
+          font-weight: 700;
+          white-space: pre-wrap;
+        }
+      }
+      .category-logo {
+        width: 30px;
+        margin: 0;
+      }
+    }
+    tbody {
+      tr {
+        height: 120px;
+        border-radius: 10px;
+        display: block;
+        .main-link {
+          padding-top: 14px;
+        }
+      }
+      tr.category-topic-link,
+      tr.subcategories-list {
+        display: none;
+      }
+    }
+    footer {
+      display: none;
+    }
+  }
+}
+
+.resources {
+  margin: 0 28px;
+  .resource-card-group {
+    flex-direction: column;
+    grid-gap: 16px;
+    .resource-card {
+      width: 330px;
+      height: 265px;
+    }
+  }
+  .section-heading {
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+}
