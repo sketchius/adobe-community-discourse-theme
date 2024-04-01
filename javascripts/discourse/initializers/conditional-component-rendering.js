@@ -6,18 +6,24 @@ export default apiInitializer("1.8.0", (api) => {
     const router = api.container.lookup("service:router");
 
     if (router.currentRoute.name === `discovery.${defaultHomepage()}`) {
-      document.querySelectorAll(
+      const headerSearchElement = document.querySelectorAll(
         ".d-header .floating-search-input-wrapper"
-      )[0].style.display = "none";
+      )[0];
+      if (headerSearchElement) {
+        headerSearchElement.style.display = "none";
+      }
       document
         .querySelectorAll(".navigation-container .select-kit-header")
         .forEach((element) => {
           element.style.display = "none";
         });
     } else {
-      document.querySelectorAll(
+      const headerSearchElement = document.querySelectorAll(
         ".d-header .floating-search-input-wrapper"
-      )[0].style.display = "flex";
+      )[0];
+      if (headerSearchElement) {
+        headerSearchElement.style.display = "flex";
+      }
       document
         .querySelectorAll(".navigation-container .select-kit-header")
         .forEach((element) => {
