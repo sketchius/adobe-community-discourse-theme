@@ -1,10 +1,11 @@
 .d-header {
   .wrap {
-    max-width: 1400px;
+    max-width: 1360px;
   }
   .title a::after {
     padding-left: 6px;
-    font-size: 16px;
+    padding-top: 4px;
+    font-size: 15px;
     font-weight: 600;
     color: var(--primary);
     content: "Adobe Community";

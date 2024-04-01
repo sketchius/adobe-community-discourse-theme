@@ -71,6 +71,22 @@ p {
 .d-header {
   box-shadow: none;
   border-bottom: 1px solid #eaeaea;
+  .panel {
+    width: 219px;
+    .d-header-icons {
+      margin: 0;
+    }
+  }
+  &-icons .d-icon {
+    color: #707070;
+    font-size: 18px;
+  }
+}
+
+  }
+}
+  }
+}
 }
 
 .custom-topic-count {
@@ -155,6 +171,12 @@ p {
         }
       }
     }
+  }
+}
+
+@media (width < 1200px) {
+  .d-header .panel {
+    width: auto;
   }
 }
 
