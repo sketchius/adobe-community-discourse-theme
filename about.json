@@ -11,7 +11,8 @@
   "components": [
     "https://github.com/discourse/discourse-header-search",
     "https://github.com/discourse/discourse-search-banner",
-    "https://github.com/discourse/discourse-stat-banner"
+    "https://github.com/discourse/discourse-stat-banner",
+    "https://github.com/discourse/discourse-icon-header-links"
   ],
   "modifiers": {
   },
