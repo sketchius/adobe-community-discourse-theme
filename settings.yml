@@ -1,4 +1,9 @@
-example_setting:
+show_featured_categories:
+  type: bool
   default: true
-  description:
-    en: A description of a setting.
+  description: "Display the Featured Categories section of the homepage."
+featured_categories:
+  type: list
+  list_type: category
+  default: ""
+  description: "Select which categories to showcase in the Featured Categories section."
