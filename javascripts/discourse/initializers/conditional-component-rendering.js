@@ -9,10 +9,20 @@ export default apiInitializer("1.8.0", (api) => {
       document.querySelectorAll(
         ".d-header .floating-search-input-wrapper"
       )[0].style.display = "none";
+      document
+        .querySelectorAll(".navigation-container .select-kit-header")
+        .forEach((element) => {
+          element.style.display = "none";
+        });
     } else {
       document.querySelectorAll(
         ".d-header .floating-search-input-wrapper"
       )[0].style.display = "flex";
+      document
+        .querySelectorAll(".navigation-container .select-kit-header")
+        .forEach((element) => {
+          element.style.display = "flex";
+        });
     }
   });
 });
