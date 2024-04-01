@@ -9,7 +9,7 @@ export default class FeaturedCategories extends Component {
   @service store;
   @service router;
   @tracked categories = [];
-  @tracked offset = 0;
+  @tracked transform = "";
   @tracked position = 0;
 
   constructor() {
@@ -31,14 +31,14 @@ export default class FeaturedCategories extends Component {
   moveLeft() {
     this.position -= 3;
     this.position = Math.max(this.position, 0);
-    this.offset = (this.position / 3) * 960;
+    this.transform = `transform: translateX(-${(this.position / 3) * 960}px);`;
   }
 
   @action
   moveRight() {
     this.position += 3;
     this.position = Math.min(this.position, this.categories.length - 3);
-    this.offset = (this.position / 3) * 960;
+    this.transform = `transform: translateX(-${(this.position / 3) * 960}px);`;
   }
 
   async loadFeaturedCategories() {

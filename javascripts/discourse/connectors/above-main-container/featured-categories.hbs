@@ -3,17 +3,17 @@
     <h3 class="featured-categories-heading">For you</h3>
     <div class="featured-categories">
         {{#if this.isLeftArrowVisible}}
-          <button class="carousel-prev" {{on "click" this.moveLeft}}>
+          <button class="carousel-prev" type="button" {{on "click" this.moveLeft}}>
             {{d-icon "chevron-left"}}
           </button>
         {{/if}}
         {{#if this.isRightArrowVisible}}
-          <button class="carousel-next" {{on "click" this.moveRight}}>
+          <button class="carousel-next" type="button" {{on "click" this.moveRight}}>
             {{d-icon "chevron-right"}}
           </button>
         {{/if}}
       <div class="featured-categories-slider">
-        <div class="featured-categories-slider-content" style="transform: translateX(-{{this.offset}}px)">
+        <div class="featured-categories-slider-content" style={{html-safe this.transform}}>
           {{#each this.categories as |category|}}
             <FeaturedCategoryBox @category={{category}} />
           {{/each}}
