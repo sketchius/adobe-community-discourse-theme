@@ -6,6 +6,8 @@
   "theme_version": "0.0.1",
   "assets": {
     "discussions": "assets/S2_Icon_conversations-icon.svg",
+    "outlink": "assets/S2_Black-outlink-icon.svg",
+    "outlink-light": "assets/S2_White-outlink-icon.svg",
     "ubuntu": "assets/Ubuntu-Medium.ttf"
   },
   "components": [
