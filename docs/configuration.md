@@ -1,8 +1,36 @@
-# Component Settings
+# Adobe Community Theme Configuration
 
-In order for this Theme to work as intended, some of the Theme Components used will require specific settings.
+This document contains information and instructions for setting up a Discourse instance to work as intended with the Adobe Community Discourse Theme.
 
-## Search Banner
+## Theme Settings
+
+The theme settings have been included during development to allow some control over the the appearance of the forum without needing to modify the theme itself.
+
+### Featured Categories
+
+You can select any number of Categories to be featured at the top of the homepage. To select Categories:
+
+1. Navigate to: **Admin -> Settings -> Customize -> Themes -> Adobe Community Theme -> featured-categories**
+2. Press the (+) to add Categories to the list.
+
+The Featured Categories component uses images from the Category settings. To make sure featured Categories are displayed correctly, check these settings.
+
+1. On the Category's topic list, click the wrench icon to edit the Category.
+2. Click images.
+3. Choose an image for 'Category Logo Image' and 'Category Background Image'.
+
+### Resource Cards
+
+There are two sets of Resource Cards displayed at the bottom of the homepage: learning resources and connect resources. To configure these follow these steps:
+
+1. Navigate to: **Admin -> Settings -> Customize -> Themes -> Adobe Community Theme -> resource cards settings**
+2. For each of the six cards, you can specify title, details, a link, a background image, a background color (for when the image is hidden), and a caption.
+
+## Component Settings
+
+This Theme uses some external Theme Components which need to be configured individually.
+
+### Search Banner
 
 The Search Banner Theme component allows you to customize the banner displayed on the homepage. In order for it to appear correctly, the following settings should be selected:
 
@@ -16,7 +44,7 @@ The Search Banner Theme component allows you to customize the banner displayed o
 
 _Note that you can customize the background image and message at any time in the future._
 
-## Stat Banner
+### Stat Banner
 
 This component is used to display site stats within the Search Banner:
 
@@ -35,34 +63,34 @@ This component is used to display site stats within the Search Banner:
 
 _Note that you can customize the background image and message at any time in the future._
 
-# Site Settings
+## Site Settings
 
-This theme changes many aspects of the appearance and functionality of a site, but for an optimal experience, there are some settings that must be selected in the site's Admin Settings.
+There are some specific site settings that are recommended when using this theme.
 
-## Category List as Homepage
+### Category List as Homepage
 
 The original site features a list of Communities as a homepage. To match this experience, the site will need to be set to display the Categories list by default:
 
 1. Navigate to: **Admin -> Settings -> Basic Setup -> top menu**
 2. Use the arrow buttons to move 'categories' to the top of the list.
 
-## Category Setup
+### Category Setup
 
-### Category Display Type
+#### Category Display Type
 
 To display Categories properly, the Theme requires a certain category page style to be selected:
 
 1. Navigate to: **Admin -> Settings -> Basic Setup -> desktop category page style**
 2. Choose 'Boxes with Subcategories'
 
-### Allowing SVG Images for Categories
+#### Allowing SVG Images for Categories
 
 The original icons for Communities (i.e. Photoshop, Illustrator) are .svg files. Before these files can be used for Categories, a setting must be changed:
 
 1. Navigate to: **Admin -> Settings -> Files -> authorized extensions**
 2. Click the (+), type 'svg', and confirm.
 
-### Adding Categories
+#### Adding Categories
 
 To ensure Categories appear as intended with this theme, follow these steps:
 
@@ -72,7 +100,7 @@ To ensure Categories appear as intended with this theme, follow these steps:
 4. Click the 'Images' tab.
 5. Upload an icon for the Category in 'Category Logo Image'.
 
-## Sidebar Display
+### Sidebar Display
 
 Discourse features a Sidebar component with navigation shortcuts to various areas. This can be hidden in a navigation menu using this setting:
 
