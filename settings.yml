@@ -7,3 +7,195 @@ featured_categories:
   list_type: category
   default: ""
   description: "Select which categories to showcase in the Featured Categories section."
+learning_resource_1_title:
+  type: string
+  default: ""
+  description: "Displayed at the top of the card."
+learning_resource_1_link:
+  type: string
+  default: ""
+  description: "A URL that this card will link to."
+learning_resource_1_description:
+  type: string
+  default: ""
+  description: "Displayed below the title."
+learning_resource_1_caption:
+  type: string
+  default: ""
+  description: "Displayed at the bottom of the card."
+learning_resource_1_invert:
+  type: bool
+  default: false
+  description: "Use light text (for use over a dark bacgrkound)."
+learning_resource_1_logo:
+  type: upload
+  default: ""
+  description: "Small logo shown next to title."
+learning_resource_1_background:
+  type: upload
+  default: ""
+  description: "Background image"
+learning_resource_1_bgcolor:
+  type: string
+  default: ""
+  description: "Background color hex code (used in place of image for small screens)"
+learning_resource_2_title:
+  type: string
+  default: ""
+  description: "Displayed at the top of the card."
+learning_resource_2_link:
+  type: string
+  default: ""
+  description: "A URL that this card will link to."
+learning_resource_2_description:
+  type: string
+  default: ""
+  description: "Displayed below the title."
+learning_resource_2_caption:
+  type: string
+  default: ""
+  description: "Displayed at the bottom of the card."
+learning_resource_2_invert:
+  type: bool
+  default: false
+  description: "Use light text (for use over a dark bacgrkound)."
+learning_resource_2_logo:
+  type: upload
+  default: ""
+  description: "Small logo shown next to title."
+learning_resource_2_background:
+  type: upload
+  default: ""
+  description: "Background image"
+learning_resource_2_bgcolor:
+  type: string
+  default: ""
+  description: "Background color hex code (used in place of image for small screens)"
+learning_resource_3_title:
+  type: string
+  default: ""
+  description: "Displayed at the top of the card."
+learning_resource_3_link:
+  type: string
+  default: ""
+  description: "A URL that this card will link to."
+learning_resource_3_description:
+  type: string
+  default: ""
+  description: "Displayed below the title."
+learning_resource_3_caption:
+  type: string
+  default: ""
+  description: "Displayed at the bottom of the card."
+learning_resource_3_invert:
+  type: bool
+  default: false
+  description: "Use light text (for use over a dark bacgrkound)."
+learning_resource_3_logo:
+  type: upload
+  default: ""
+  description: "Small logo shown next to title."
+learning_resource_3_background:
+  type: upload
+  default: ""
+  description: "Background image"
+learning_resource_3_bgcolor:
+  type: string
+  default: ""
+  description: "Background color hex code (used in place of image for small screens)"
+connect_resource_1_title:
+  type: string
+  default: ""
+  description: "Displayed at the top of the card."
+connect_resource_1_link:
+  type: string
+  default: ""
+  description: "A URL that this card will link to."
+connect_resource_1_description:
+  type: string
+  default: ""
+  description: "Displayed below the title."
+connect_resource_1_caption:
+  type: string
+  default: ""
+  description: "Displayed at the bottom of the card."
+connect_resource_1_invert:
+  type: bool
+  default: false
+  description: "Use light text (for use over a dark bacgrkound)."
+connect_resource_1_logo:
+  type: upload
+  default: ""
+  description: "Small logo shown next to title."
+connect_resource_1_background:
+  type: upload
+  default: ""
+  description: "Background image"
+connect_resource_1_bgcolor:
+  type: string
+  default: ""
+  description: "Background color hex code (used in place of image for small screens)"
+connect_resource_2_title:
+  type: string
+  default: ""
+  description: "Displayed at the top of the card."
+connect_resource_2_link:
+  type: string
+  default: ""
+  description: "A URL that this card will link to."
+connect_resource_2_description:
+  type: string
+  default: ""
+  description: "Displayed below the title."
+connect_resource_2_caption:
+  type: string
+  default: ""
+  description: "Displayed at the bottom of the card."
+connect_resource_2_invert:
+  type: bool
+  default: false
+  description: "Use light text (for use over a dark bacgrkound)."
+connect_resource_2_logo:
+  type: upload
+  default: ""
+  description: "Small logo shown next to title."
+connect_resource_2_background:
+  type: upload
+  default: ""
+  description: "Background image"
+connect_resource_2_bgcolor:
+  type: string
+  default: ""
+  description: "Background color hex code (used in place of image for small screens)"
+connect_resource_3_title:
+  type: string
+  default: ""
+  description: "Displayed at the top of the card."
+connect_resource_3_link:
+  type: string
+  default: ""
+  description: "A URL that this card will link to."
+connect_resource_3_description:
+  type: string
+  default: ""
+  description: "Displayed below the title."
+connect_resource_3_caption:
+  type: string
+  default: ""
+  description: "Displayed at the bottom of the card."
+connect_resource_3_invert:
+  type: bool
+  default: false
+  description: "Use light text (for use over a dark bacgrkound)."
+connect_resource_3_logo:
+  type: upload
+  default: ""
+  description: "Small logo shown next to title."
+connect_resource_3_background:
+  type: upload
+  default: ""
+  description: "Background image"
+connect_resource_3_bgcolor:
+  type: string
+  default: ""
+  description: "Background color hex code (used in place of image for small screens)"

@@ -1,0 +1,11 @@
+<div class={{concat "resource-card " this.invertStyle this.headingStyle}} style={{html-safe (concat "background-image: url(" this.background "); background-color: #" this.bgcolor ";")}}>
+  <div class="header">
+    {{#if this.logo}}
+      <div class="logo"><img src={{html-safe this.logo}} alt=""></div>
+    {{/if}}
+    <h4 class="heading">{{this.title}}</h4>
+    <div class="outlink-icon"></div>
+  </div>
+  <p class="description">{{this.description}}</p>
+  <p class="caption">{{this.caption}}</p>
+</div>
