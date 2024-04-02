@@ -1,3 +1,4 @@
+// Global styles
 * {
   --d-max-width: 950px;
   font-family: "Ubuntu", "Times New Roman", Times, serif !important;
@@ -15,12 +16,12 @@ p {
 
 .select-kit.combo-box {
   .combo-box-header {
-    background-color: #e6e6e6;
-    border-radius: 9px;
-    font-size: 14px;
-    border: none;
-    color: var(--primary) !important;
     padding: 0px 13px;
+    border: none;
+    border-radius: 9px;
+    background-color: #e6e6e6;
+    color: var(--primary) !important;
+    font-size: 14px;
     &:hover {
       background-color: #d5d5d5;
     }
@@ -35,11 +36,34 @@ p {
 .nav-pills > li button.active,
 .nav-pills > li > a:hover,
 .nav-pills > li button:hover {
+  border-radius: 9px;
   color: var(--primary);
   background-color: #d5d5d5;
-  border-radius: 9px;
 }
 
+.d-header {
+  box-shadow: none;
+  border-bottom: 1px solid #eaeaea;
+  .panel {
+    width: 219px;
+    .d-header-icons {
+      margin: 0;
+    }
+  }
+  &-icons .d-icon {
+    color: #707070;
+    font-size: 18px;
+  }
+}
+
+.section-heading {
+  margin-top: 28px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+// Styling for 'desktop category page style' set to 'Boxes with Subcategories'
 .category-boxes {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   .category-box {
@@ -54,22 +78,24 @@ p {
       box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
     }
     h3 {
+      margin: 0;
       font-size: 13px;
       font-weight: 700;
       text-align: left;
-      margin: 0;
+      .custom-topic-count {
+        display: none;
+      }
     }
     &-inner {
       display: grid;
       grid-template-columns: 30px auto;
       grid-template-rows: auto auto;
-      height: fit-content;
-      border: none;
-      flex-direction: row;
       column-gap: 12px;
       row-gap: 4px;
-      padding: 13px !important;
+      height: fit-content;
       margin-top: 3px;
+      padding: 13px !important;
+      border: none;
       .category-logo {
         grid-column: 1;
         grid-row: 1 / 3;
@@ -100,7 +126,7 @@ p {
   }
 }
 
-// Category List Styling
+// Styling for 'desktop category page style' set to 'Category with Featured Topics'
 .category-list.with-topics {
   display: block;
   thead {
@@ -122,28 +148,28 @@ p {
   }
   tbody {
     display: flex;
-    width: 100%;
     flex-direction: column;
     gap: 6px;
+    width: 100%;
     border: none;
     tr {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      border: none;
-      background-color: #f9f9f9;
       margin-bottom: 8px;
+      border: none;
       border-radius: 16px;
+      background-color: #f9f9f9;
       box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
       transition: box-shadow 1s;
       &:hover {
         box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
       }
       .category {
+        position: relative;
         display: block;
         height: 80px;
         border: none;
         padding-left: 20px;
-        position: relative;
         &-description,
         .subcategories {
           display: none;
@@ -151,9 +177,9 @@ p {
         &-title-link {
           display: flex;
           gap: 10px;
+          margin: 5px 0 5px 88px;
           font-size: 18px;
           font-weight: 500;
-          margin: 5px 0 5px 88px;
         }
         .category-logo.aspect-image {
           position: absolute;
@@ -189,68 +215,47 @@ p {
   }
 }
 
-.d-header {
-  box-shadow: none;
-  border-bottom: 1px solid #eaeaea;
-  .panel {
-    width: 219px;
-    .d-header-icons {
-      margin: 0;
-    }
-  }
-  &-icons .d-icon {
-    color: #707070;
-    font-size: 18px;
-  }
-}
-
-.section-heading {
-  font-size: 20px;
-  font-weight: 800;
-  margin-top: 28px;
-  margin-bottom: 12px;
-}
-
 .featured-categories-wrapper {
-  height: 278px;
-  min-height: 278px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 278px;
+  min-height: 278px;
   &::before {
     content: "";
-    display: block;
     position: absolute;
     left: 0;
     right: 0;
+    display: block;
     height: 278px;
     background-color: #f8f8f8;
   }
-  .featured-categories-heading {
+  .section-heading {
     position: relative;
+    margin-bottom: 1px;
+    margin-top: 14px;
     font-size: 20px;
     font-weight: 800;
-    margin-bottom: 1px;
   }
   .featured-categories {
-    display: flex;
     position: relative;
-    height: fit-content;
+    display: flex;
     align-items: center;
     justify-content: flex-start;
+    height: fit-content;
     width: 940px;
     padding-top: 10px;
     padding-bottom: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 14px;
     .carousel-prev,
     .carousel-next {
+      position: absolute;
+      z-index: 2;
       height: 30px;
       width: 30px;
-      position: absolute;
-      background-color: white;
       border-radius: 64px;
       border: none;
-      z-index: 2;
+      background-color: white;
       box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.12);
     }
     .carousel-prev {
@@ -260,23 +265,23 @@ p {
       right: -3px;
     }
     &-slider {
-      overflow: hidden;
       padding: 6px 0;
+      overflow: hidden;
       &-content {
         display: flex;
-        width: fit-content;
         align-items: center;
         justify-content: center;
+        width: fit-content;
         transition: transform 0.5s ease-in-out;
         .featured-category {
-          z-index: 1;
           position: relative;
+          z-index: 1;
           width: 288px;
           height: 155px;
           margin-right: 31px;
           margin-left: 1px;
-          background-color: white;
           border-radius: 10px;
+          background-color: white;
           box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.12);
           transition: box-shadow 1s;
           &:hover {
@@ -286,28 +291,28 @@ p {
           &-content {
             .category-background {
               position: absolute;
-              background-size: cover;
               left: 0;
               top: 0;
               width: 100%;
               height: 61px;
               border-top-left-radius: 10px;
               border-top-right-radius: 10px;
+              background-size: cover;
             }
             .category-logo {
+              position: relative;
               height: 29px;
               width: 28px;
               margin-top: 45px;
               margin-left: 13px;
               border: 1px solid white;
               border-radius: 6px;
-              position: relative;
             }
             .category-details {
               display: flex;
-              padding: 6px 20px 13px 13px;
-              box-sizing: border-box;
               justify-content: space-between;
+              box-sizing: border-box;
+              padding: 6px 20px 13px 13px;
               .text {
                 display: flex;
                 flex-direction: column;
@@ -318,16 +323,16 @@ p {
                 }
               }
               .btn-visit {
-                background-color: #222222;
-                color: var(--secondary);
+                height: 22px;
                 border-radius: 16px;
                 border: none;
-                font-size: 13px;
-                font-weight: 600;
+                margin-top: 5px;
                 padding: 4px 15px;
                 padding-bottom: 6px;
-                margin-top: 5px;
-                height: 22px;
+                background-color: #222222;
+                color: var(--secondary);
+                font-size: 13px;
+                font-weight: 600;
               }
             }
           }
@@ -341,17 +346,17 @@ p {
   .icon {
     width: 15px;
     height: 16.5px;
+    border: none;
     background: url($discussions);
     background-size: cover;
     background-position: center;
-    border: none;
   }
   display: flex;
   gap: 6px;
+  color: #4b4b4b;
   font-size: 11px;
   font-weight: 400;
   line-height: 16.5px;
-  color: #4b4b4b;
 }
 
 .search-banner {
@@ -369,31 +374,31 @@ p {
         max-width: 408px;
       }
       h1 {
+        margin-top: 20px;
+        color: var(--secondary);
         font-size: 26px;
         letter-spacing: -0.2px;
-        color: var(--secondary);
-        margin-top: 20px;
       }
       .btn.search-icon:not(.has-search-button-text) {
         left: 8px;
       }
       .search-input {
-        background: none;
-        border: none;
         padding: 0 !important;
+        border: none;
+        background: none;
         input {
-          background: white !important;
           border: none;
-          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.35);
           border-radius: 16px;
+          background: white !important;
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.35);
         }
         .searching {
           position: absolute;
           right: 16px;
         }
         input#search-term[type="text"] {
-          padding: 1px 46px;
           height: 33px;
+          padding: 1px 46px;
         }
       }
       .custom-stats {
@@ -424,8 +429,8 @@ p {
 
 .resources {
   display: flex;
-  align-content: center;
   flex-direction: column;
+  align-content: center;
   &::before {
     content: "";
     position: absolute;
@@ -445,14 +450,14 @@ p {
     justify-content: space-between;
     .resource-card {
       display: flex;
+      flex-direction: column;
       width: 288px;
       height: 265px;
-      flex-direction: column;
-      background-size: cover;
-      border-radius: 10px;
       padding: 20px;
       padding-bottom: 8px;
+      border-radius: 10px;
       box-sizing: border-box;
+      background-size: cover;
       background-position-x: 50%;
       background-position-y: 50%;
       .header {
@@ -519,9 +524,3 @@ p {
   }
 }
 
-// Development Styles
-.bootstrap-mode,
-.fk-d-button-tooltip,
-.d-icon-lock {
-  display: none;
-}
