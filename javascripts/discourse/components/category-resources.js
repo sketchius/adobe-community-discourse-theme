@@ -25,6 +25,9 @@ export default class CategoryResources extends Component {
     const result = await lookupCategoryByPath(this.router.currentURL);
     if (result.found) {
       this.customCategoryData = await this.getCustomCategoryData(result.match);
+      if (!this.customCategoryData && result.isSubcategory) {
+        this.customCategoryData = await this.getCustomCategoryData(result.parent);
+      }
     }
   }
 
