@@ -1,16 +1,29 @@
 <div class="featured-category">
-    <a href="c/{{@category.slug}}/{{@category.id}}" class="featured-category-content">
-        <div class="category-background" style={{html-safe ( concat "background-image: url('" @category.uploaded_background.url "');")}} role="img" aria-label="{{@category.name}} background"></div>
-        <img class="category-logo" src={{@category.uploaded_logo.url}}/>
-        <div class="category-details">
-            <div class="text">
-                <div class="category-name">{{@category.name}}</div>
-                <div class="custom-topic-count">
-                    <div class="icon"></div>
-                    <div title={{@category.statTitle}}>{{html-safe @category.stat}} {{lowercase (i18n "categories.topics")}}</div>
-                </div>
-            </div>
-            <div class="btn-visit">Visit</div>
+  <a
+    href="c/{{@category.slug}}/{{@category.id}}"
+    class="featured-category-content"
+  >
+    <div
+      class="category-background"
+      style={{html-safe
+        (concat
+          "background-image: url('" @category.uploaded_background.url "');"
+        )
+      }}
+      role="img"
+      aria-label="{{@category.name}} background"
+    ></div>
+    <img class="category-logo" src={{@category.uploaded_logo.url}} />
+    <div class="category-details">
+      <div class="text">
+        <div class="category-name">{{@category.name}}</div>
+        <div class="custom-topic-count">
+          <div class="icon"></div>
+          <div title={{@category.statTitle}}>{{html-safe @category.stat}}
+            {{lowercase (i18n "categories.topics")}}</div>
         </div>
-    </a>
+      </div>
+      <div class="btn-visit">Visit</div>
+    </div>
+  </a>
 </div>

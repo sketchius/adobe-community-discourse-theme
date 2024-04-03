@@ -45,7 +45,7 @@ export default class FeaturedCategories extends Component {
     try {
       const featuredCategoryIds = settings.featured_categories.split("|");
       this.categories = featuredCategoryIds.map((categoryId) =>
-        Category.findById(categoryId)
+        Category.findById(categoryId),
       );
     } catch (error) {
       this.categories = [];

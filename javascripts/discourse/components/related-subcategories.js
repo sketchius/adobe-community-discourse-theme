@@ -1,7 +1,7 @@
 import Component from "@glimmer/component";
 import { tracked } from "@glimmer/tracking";
 import { inject as service } from "@ember/service";
-import { withPluginApi } from 'discourse/lib/plugin-api';
+import { withPluginApi } from "discourse/lib/plugin-api";
 import { getSubcategoriesByParentSlug } from "../../utils/categoryLookup";
 
 export default class CategoryResources extends Component {
@@ -13,7 +13,7 @@ export default class CategoryResources extends Component {
     super(...arguments);
     this.loadRelatedSubcategories();
 
-    withPluginApi('1.8', api => {
+    withPluginApi("1.8", (api) => {
       api.onPageChange(() => {
         this.loadRelatedSubcategories();
       });
@@ -23,7 +23,7 @@ export default class CategoryResources extends Component {
   async loadRelatedSubcategories() {
     this.relatedSubcategories = [];
     this.isSubcategory = undefined;
-    const pathParts = this.router.currentURL.split('/');
+    const pathParts = this.router.currentURL.split("/");
     let slug;
     if (pathParts.length >= 3) {
       slug = pathParts[2];
@@ -31,9 +31,11 @@ export default class CategoryResources extends Component {
       if (pathParts.length >= 5) {
         this.isSubcategory = true;
         const subcategorySlug = pathParts[3];
-        this.relatedSubcategories = this.relatedSubcategories.filter( item => item.slug !== subcategorySlug);
+        this.relatedSubcategories = this.relatedSubcategories.filter(
+          (item) => item.slug !== subcategorySlug,
+        );
       }
-      this.relatedSubcategories.forEach( subcategory => {
+      this.relatedSubcategories.forEach((subcategory) => {
         subcategory.link_url = `/c/${slug}/${subcategory.slug}/${subcategory.id}`;
       });
     }
@@ -44,6 +46,6 @@ export default class CategoryResources extends Component {
   }
 
   get title() {
-    return this.isSubcategory ? 'Related Subcategories' : 'Subcategories';
+    return this.isSubcategory ? "Related Subcategories" : "Subcategories";
   }
 }

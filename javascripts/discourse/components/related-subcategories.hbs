@@ -1,18 +1,19 @@
 {{#if this.shouldRender}}
-<div class="related-subcategories">
+  <div class="related-subcategories">
     <h3 class="sidebar-heading">{{this.title}}</h3>
     {{#each this.relatedSubcategories as |subcategory|}}
-        <div class="subcategory">
-            <div class="category-logo">
-                <img src={{subcategory.uploaded_logo.url}} alt="Category Logo">
-            </div>
-            <div class="details">
-                <a href={{subcategory.link_url}}>{{subcategory.name}}</a>
-                <div class="custom-topic-count">
-                    {{html-safe subcategory.topic_count}} {{lowercase (i18n "categories.topics")}}
-                </div>
-            </div>
+      <div class="subcategory">
+        <div class="category-logo">
+          <img src={{subcategory.uploaded_logo.url}} alt="Category Logo" />
         </div>
+        <div class="details">
+          <a href={{subcategory.link_url}}>{{subcategory.name}}</a>
+          <div class="custom-topic-count">
+            {{html-safe subcategory.topic_count}}
+            {{lowercase (i18n "categories.topics")}}
+          </div>
+        </div>
+      </div>
     {{/each}}
-</div>
+  </div>
 {{/if}}

@@ -1,8 +1,20 @@
 {{#if this.shouldRender}}
-    <section class="resources">
-        <h3 class="section-heading">Learn with Adobe</h3>
-        <div class="resource-card-group"><ResourceCard @group="learning" @cardId="1"/><ResourceCard @group="learning" @cardId="2"/><ResourceCard @group="learning" @cardId="3"/></div>
-        <h3 class="section-heading">More places to connect</h3>
-        <div class="resource-card-group"><ResourceCard @group="connect" @cardId="1"/><ResourceCard @group="connect" @cardId="2"/><ResourceCard @group="connect" @cardId="3"/></div>
-    </section>
+  <section class="resources">
+    <h3 class="section-heading">Learn with Adobe</h3>
+    <div class="resource-card-group"><ResourceCard
+        @group="learning"
+        @cardId="1"
+      /><ResourceCard @group="learning" @cardId="2" /><ResourceCard
+        @group="learning"
+        @cardId="3"
+      /></div>
+    <h3 class="section-heading">More places to connect</h3>
+    <div class="resource-card-group"><ResourceCard
+        @group="connect"
+        @cardId="1"
+      /><ResourceCard @group="connect" @cardId="2" /><ResourceCard
+        @group="connect"
+        @cardId="3"
+      /></div>
+  </section>
 {{/if}}

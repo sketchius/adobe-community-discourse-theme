@@ -7,7 +7,7 @@ export default apiInitializer("1.8.0", (api) => {
 
     if (router.currentRoute.name === `discovery.${defaultHomepage()}`) {
       const headerSearchElement = document.querySelectorAll(
-        ".d-header .floating-search-input-wrapper"
+        ".d-header .floating-search-input-wrapper",
       )[0];
       if (headerSearchElement) {
         headerSearchElement.style.display = "none";
@@ -19,7 +19,7 @@ export default apiInitializer("1.8.0", (api) => {
         });
     } else {
       const headerSearchElement = document.querySelectorAll(
-        ".d-header .floating-search-input-wrapper"
+        ".d-header .floating-search-input-wrapper",
       )[0];
       if (headerSearchElement) {
         headerSearchElement.style.display = "flex";

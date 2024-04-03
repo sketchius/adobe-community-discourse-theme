@@ -14,7 +14,7 @@ export default class CategoryResourceGroup extends Component {
   }
 
   get toggleClass() {
-    return this.expanded ? 'toggled' : '';
+    return this.expanded ? "toggled" : "";
   }
 
   @action

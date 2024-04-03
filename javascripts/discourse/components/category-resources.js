@@ -1,7 +1,7 @@
 import Component from "@glimmer/component";
 import { tracked } from "@glimmer/tracking";
 import { inject as service } from "@ember/service";
-import { withPluginApi } from 'discourse/lib/plugin-api';
+import { withPluginApi } from "discourse/lib/plugin-api";
 import { lookupCategoryByPath } from "../../utils/categoryLookup";
 
 export default class CategoryResources extends Component {
@@ -13,7 +13,7 @@ export default class CategoryResources extends Component {
     super(...arguments);
     this.loadCustomCategoryData();
 
-    withPluginApi('1.8', api => {
+    withPluginApi("1.8", (api) => {
       api.onPageChange(() => {
         this.loadCustomCategoryData();
       });
@@ -39,10 +39,12 @@ export default class CategoryResources extends Component {
 
   async getCustomCategoryData(category) {
     try {
-        const parsedData = JSON.parse(settings.custom_category_data);
-        return parsedData.find( (categoryData) => categoryData.category_slug === category.slug );
+      const parsedData = JSON.parse(settings.custom_category_data);
+      return parsedData.find(
+        (categoryData) => categoryData.category_slug === category.slug,
+      );
     } catch {
-        return undefined;
+      return undefined;
     }
   }
 }

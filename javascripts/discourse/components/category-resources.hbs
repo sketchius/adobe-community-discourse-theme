@@ -1,8 +1,8 @@
 {{#if this.shouldRender}}
-<div class="category-resources">
+  <div class="category-resources">
     <h3 class="sidebar-heading">Resources</h3>
     {{#each this.customCategoryData.resources as |resource|}}
-      <CategoryResourceGroup @resource={{resource}}/>
+      <CategoryResourceGroup @resource={{resource}} />
     {{/each}}
-</div>
+  </div>
 {{/if}}
