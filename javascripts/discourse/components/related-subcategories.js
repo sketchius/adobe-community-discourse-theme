@@ -33,6 +33,9 @@ export default class CategoryResources extends Component {
         const subcategorySlug = pathParts[3];
         this.relatedSubcategories = this.relatedSubcategories.filter( item => item.slug !== subcategorySlug);
       }
+      this.relatedSubcategories.forEach( subcategory => {
+        subcategory.link_url = `/c/${slug}/${subcategory.slug}/${subcategory.id}`;
+      });
     }
   }
 
