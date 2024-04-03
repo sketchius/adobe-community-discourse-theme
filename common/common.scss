@@ -612,6 +612,29 @@ p {
   }
 }
 
+// Category/topic list banner styles
+section.category-heading {
+  display: none;
+}
+
+.category-title-header {
+  background-color: var(--primary-50) !important;
+  color: var(--primary) !important;
+  font-size: 14px;
+  width: 100%;
+  .category-logo img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+h3.sidebar-heading {
+  padding: 0;
+  border: none;
+  font-weight: 500;
+  font-size: 20px;
+}
+
 //Category Stats Component
 .category-stats {
   .stats-grid {
@@ -629,6 +652,34 @@ p {
         font-size: 11px;
         font-weight: 600;
         color: var(--primary-500);
+      }
+    }
+  }
+}
+
+// Related Subcategories Component
+.related-subcategories .subcategory {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 6px;
+  .category-logo img {
+    height: 40px;
+    width: 39px;
+    border-radius: 10px;
+  }
+  .details {
+    font-size: 13px;
+    font-weight: 600;
+    .custom-topic-count {
+      color: var(--primary-700);
+      font-weight: 500;
+    }
+    a {
+      color: var(--primary);
+      &:hover {
+        color: var(--primary);
+        text-decoration: underline;
       }
     }
   }
