@@ -26,7 +26,9 @@ export default class CategoryResources extends Component {
     if (result.found) {
       this.customCategoryData = await this.getCustomCategoryData(result.match);
       if (!this.customCategoryData && result.isSubcategory) {
-        this.customCategoryData = await this.getCustomCategoryData(result.parent);
+        this.customCategoryData = await this.getCustomCategoryData(
+          result.parent,
+        );
       }
     }
   }
