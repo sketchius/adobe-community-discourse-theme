@@ -1,0 +1,15 @@
+<div class="category-resources-group">
+  <div class="group-title">
+    {{@resource.resource_type}}
+    <button class={{this.toggleClass}} type="button" {{on "click" this.toggle}}>
+      {{d-icon "chevron-down"}}
+    </button>
+  </div>
+  {{#if this.isExpanded}}
+    <div class="links">
+      {{#each @resource.details as |link|}}
+          <a href={{link.resource_url}}>{{link.resource_title}}</a>
+      {{/each}}
+    </div>
+  {{/if}}
+</div>

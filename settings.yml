@@ -7,6 +7,74 @@ featured_categories:
   list_type: category
   default: ""
   description: "Select which categories to showcase in the Featured Categories section."
+custom_category_data:
+    default: >-
+      [{"category_slug":"photoshop","install_url":"","resources":[{"resource_type":"Quick links - Photoshop","details":[{"resource_title":"Get to know Photoshop","resource_url":"https://helpx.adobe.com/photoshop/how-to/ps-basics-fundamentals.html"},{"resource_title":"Handy Photoshop Links you will want to bookmark","resource_url":"https://adobe.ly/38N1JG5"},{"resource_title":"Inspiring tutorials","resource_url":"https://helpx.adobe.com/photoshop/tutorials.html"},{"resource_title":"User Guide - Photoshop","resource_url":"https://helpx.adobe.com/photoshop/user-guide.html"},{"resource_title":"System Requirements","resource_url":"https://helpx.adobe.com/photoshop/system-requirements.html"},{"resource_title":"Download and Install","resource_url":"https://adobe.ly/2CA8WJF"}]},{"resource_type":"Quick links - Photoshop Mobile","details":[{"resource_title":"Get to know workspace","resource_url":"https://helpx.adobe.com/photoshop/using/workspace-ipad.html"},{"resource_title":"User Guide","resource_url":"https://helpx.adobe.com/photoshop/user-guide.html"},{"resource_title":"Common Questions","resource_url":"https://helpx.adobe.com/photoshop/using/photoshop-ipad-faq.html"},{"resource_title":"Photoshop Cloud Documents","resource_url":"https://helpx.adobe.com/photoshop/using/cloud-documents-faq.html"},{"resource_title":"Have a feature request - Submit here","resource_url":"https://community.adobe.com/t5/photoshop-ecosystem/ct-p/ct-photoshop?page=1&sort=latest_replies&filter=all&tabid=ideas"}]},{"resource_type":"Troubleshoot & Learn new things","details":[{"resource_title":"Troubleshoot Crash & Freeze issues","resource_url":"https://adobe.ly/2WbLV9A"},{"resource_title":"Troubleshoot - Scratch disk are full error","resource_url":"https://adobe.ly/3b1sTXO"},{"resource_title":"Work with Photoshop files in InDesign","resource_url":"https://adobe.ly/3uJ5DI9"},{"resource_title":"Photoshop Monthly Newsletter","resource_url":"https://adobe.ly/2TvmD5m","author":"Pattie-F"},{"resource_title":"Photoshop Quick tips","resource_url":"https://adobe.ly/3hTVlyJ","author":"Pattie-F"},{"resource_title":"Move artwork between Photoshop & Illustrator","resource_url":"https://adobe.ly/3l19kEg","author":"Pattie-F"}]}]}]
+    json_schema: '{
+      "type": "array",
+      "title": "Categories with Resources",
+      "description": "Configure categories and their resources",
+      "format": "table",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category_slug": {
+            "type": "string",
+            "title": "Category Slug",
+            "description": "The identifier for the category (from Category settings)"
+          },
+          "install_url": {
+            "type": "string",
+            "title": "Installation URL",
+            "description": "URL to provide an install link",
+            "format": "uri"
+          },
+          "resources": {
+            "type": "array",
+            "title": "Resources",
+            "description": "List of resources within the category",
+            "items": {
+              "type": "object",
+              "properties": {
+                "resource_type": {
+                  "type": "string",
+                  "title": "Resource Type",
+                  "description": "The type of resource"
+                },
+                "details": {
+                  "type": "array",
+                  "title": "Resource Details",
+                  "format": "table",
+                  "description": "Details of the resource",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "resource_title": {
+                        "type": "string",
+                        "title": "Resource Title",
+                        "description": "Title of the resource"
+                      },
+                      "resource_url": {
+                        "type": "string",
+                        "title": "Resource URL",
+                        "description": "URL of the resource",
+                        "format": "uri"
+                      }
+                    },
+                    "required": ["resource_title", "resource_url"],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": ["resource_type", "details"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["category_slug", "resources"],
+        "additionalProperties": false
+      }
+    }'
 learning_resource_1_title:
   type: string
   default: ""

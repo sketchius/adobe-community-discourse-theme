@@ -657,6 +657,54 @@ h3.sidebar-heading {
   }
 }
 
+//Category Resources Component
+.category-resources {
+  &-group {
+    .group-title {
+      padding: 4px 0;
+      font-size: 14px;
+      font-weight: 600;
+      button {
+        background: none;
+        border: none;
+        svg {
+          fill: var(--primary-700);
+          stroke: var(--primary-700);
+        }
+        &:hover svg {
+          fill: var(--quaternary);
+          stroke: var(--quaternary);
+        }
+      }
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 16px 16px;
+      background-color: var(--primary-50);
+      a {
+        color: var(--primary);
+        font-size: 12px;
+        &:hover {
+          display: flex;
+          align-items: center;
+          color: var(--primary);
+          text-decoration: underline;
+          &::after {
+            content: "";
+            height: 14px;
+            width: 14px;
+            margin-left: 4px;
+            background-size: cover;
+            background-image: url($outlink-quaternary);
+          }
+        }
+      }
+    }
+  }
+}
+
 // Related Subcategories Component
 .related-subcategories .subcategory {
   display: flex;
