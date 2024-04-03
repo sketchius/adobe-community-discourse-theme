@@ -117,20 +117,20 @@ p {
       border: none;
       border-radius: 9px;
       background-color: var(--primary-low);
-    color: var(--primary) !important;
-    font-size: 14px;
+      color: var(--primary) !important;
+      font-size: 14px;
       &.category-drop-header {
         padding: 0px 13px;
       }
-    &:hover {
+      &:hover {
         background-color: var(--primary-300);
       }
       .d-icon-caret-right {
         transform: rotate(90deg);
         padding-left: 2px;
+      }
     }
   }
-}
 }
 
 .nav-pills > li > a {
@@ -162,6 +162,15 @@ p {
   }
 }
 
+.timeline-container .topic-timeline {
+  .timeline-scrollarea {
+    border-left: 1px solid var(--primary-high);
+  }
+  .timeline-handle {
+    background-color: var(--primary-high);
+  }
+}
+
 .section-heading {
   margin-top: 28px;
   margin-bottom: 12px;
@@ -169,7 +178,7 @@ p {
   font-weight: 800;
 }
 
-// Styling for 'desktop category page style' set to 'Boxes with Subcategories'
+// ** Styling for 'desktop category page style' set to 'Boxes with Subcategories'
 .category-boxes {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   .category-box {
@@ -232,7 +241,7 @@ p {
   }
 }
 
-// Styling for 'desktop category page style' set to 'Category with Featured Topics'
+// ** Styling for 'desktop category page style' set to 'Category with Featured Topics'
 .category-list.with-topics {
   display: block;
   thead {
@@ -531,6 +540,9 @@ p {
       }
     }
   }
+  &-inner {
+    background-color: white;
+  }
 }
 
 .resources {
@@ -733,6 +745,17 @@ h3.sidebar-heading {
   }
 }
 
+// ** Topic List Styles
+#list-area {
+  .topic-list .topic-list-data {
+    padding: 20px 5px;
+  }
+}
+
+.footer-message h3 {
+  font-size: 18px;
+}
+
 @media (width < 1200px) {
   .d-header .panel {
     width: auto;
@@ -751,3 +774,13 @@ h3.sidebar-heading {
   }
 }
 
+body.navigation-category * {
+  --d-max-width: 1300px;
+}
+
+// ** Development Styles
+.bootstrap-mode,
+.fk-d-button-tooltip,
+.d-icon-lock {
+  display: none;
+}

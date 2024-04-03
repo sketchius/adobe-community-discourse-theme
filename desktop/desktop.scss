@@ -11,3 +11,13 @@
     content: "Adobe Community";
   }
 }
+
+.category-list.with-topics tbody tr .category-title-link .custom-topic-count {
+  display: block;
+}
+
+@media (width < 1200px) {
+  .resource-card {
+    background-image: none !important;
+  }
+}
