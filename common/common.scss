@@ -612,6 +612,28 @@ p {
   }
 }
 
+//Category Stats Component
+.category-stats {
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    & > div {
+      padding: 4px 8px;
+      border-left: 1px solid var(--primary-low);
+      .stat {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--primary-900);
+      }
+      .stat-label {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--primary-500);
+      }
+    }
+  }
+}
+
 @media (width < 1200px) {
   .d-header .panel {
     width: auto;
