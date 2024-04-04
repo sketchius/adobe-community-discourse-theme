@@ -2,8 +2,9 @@ import { ajax } from "discourse/lib/ajax";
 import CategoryList from "discourse/models/category-list";
 
 export async function lookupCategoryByPath(path) {
-  const pattern = /^\/c\/.*?\/(\d+)$/;
+  const pattern = /^\/c\/[^\/]+(?:\/[^\/]+)?\/(\d+)/;
   const match = path.match(pattern);
+
   if (match) {
     return lookupCategoryById(match[1]);
   } else {
