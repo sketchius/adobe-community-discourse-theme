@@ -25,7 +25,8 @@
     "https://github.com/discourse/discourse-stat-banner",
     "https://github.com/discourse/discourse-icon-header-links",
     "https://github.com/discourse/discourse-right-sidebar-blocks",
-    "https://github.com/discourse/discourse-category-banners"
+    "https://github.com/discourse/discourse-category-banners",
+    "https://github.com/discourse/discourse-topic-excerpts"
   ],
   "modifiers": {},
   "color_schemes": {
