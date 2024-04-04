@@ -119,3 +119,19 @@ body {
     margin-bottom: 8px;
   }
 }
+
+.custom-footer {
+  &-inner {
+    flex-direction: column;
+    height: fit-content;
+    align-items: flex-start;
+    padding: 18px 14px;
+    .footer-links {
+      flex-wrap: wrap;
+      row-gap: 5px;
+    }
+    a {
+      color: var(--primary);
+    }
+  }
+}

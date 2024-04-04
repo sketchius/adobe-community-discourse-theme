@@ -756,6 +756,29 @@ h3.sidebar-heading {
   font-size: 18px;
 }
 
+.custom-footer {
+  background-color: var(--primary-100);
+  border-top: 2px solid var(--primary-200);
+  &-inner {
+    display: flex;
+    gap: 10px;
+    height: 26px;
+    padding-top: 2px;
+    padding-bottom: 6px;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: var(--primary);
+    .footer-links {
+      display: flex;
+      gap: 10px;
+    }
+    a {
+      color: var(--primary);
+    }
+  }
+}
+
 @media (width < 1200px) {
   .d-header .panel {
     width: auto;
