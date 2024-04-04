@@ -18,7 +18,6 @@
 
 // ** Global styles
 * {
-  --d-max-width: 950px;
   font-family: ubuntu-local, "Times New Roman", Times, serif !important;
   letter-spacing: -0.2px;
 }
@@ -48,47 +47,58 @@ p {
 }
 
 .btn {
-  &.no-text:not(.btn-flat),
-  &.btn-default {
-    background-color: var(--primary-low);
-    border-radius: 9px;
-    @include dark-svg();
-    &:hover {
-      background-color: var(--primary-300);
-    }
-  }
-  &.btn-icon-text {
-    border: 2px solid var(--primary);
-    border-radius: 24px;
-    background-color: var(--secondary);
-    color: var(--primary);
-    font-size: 15px;
-    font-weight: 600;
-    text-transform: capitalize;
-    &:hover {
-      background-color: var(--primary-300);
-    }
-    &:active {
-      background-color: var(--primary-500);
-    }
-    @include dark-svg();
-    &.btn-danger {
-      background-color: var(--danger);
-      &:hover {
-        background-color: var(--danger-hover);
-      }
-      color: var(--danger-low);
-      svg {
-        fill: var(--danger-low);
-        stroke: var(--danger-low);
-      }
-    }
-  }
-  &-primary.create {
+  background-color: white;
+  // &.no-text:not(.btn-flat),
+  // &.btn-default {
+  //   background-color: var(--primary-low);
+  //   border-radius: 9px;
+  //   @include dark-svg();
+  //   &:hover {
+  //     background-color: var(--primary-300);
+  //   }
+  // }
+  // &.btn-icon-text,
+  // &.sign-up-button {
+  //   border: 2px solid var(--primary);
+  //   border-radius: 24px;
+  //   background-color: var(--secondary);
+  //   color: var(--primary);
+  //   font-size: 15px;
+  //   font-weight: 600;
+  //   text-transform: capitalize;
+  //   &:hover {
+  //     background-color: var(--primary-300);
+  //   }
+  //   &:active {
+  //     background-color: var(--primary-500);
+  //   }
+  //   @include dark-svg();
+  //   &.btn-danger {
+  //     background-color: var(--danger);
+  //     &:hover {
+  //       background-color: var(--danger-hover);
+  //     }
+  //     color: var(--danger-low);
+  //     svg {
+  //       fill: var(--danger-low);
+  //       stroke: var(--danger-low);
+  //     }
+  //   }
+  // }
+  &-primary {
     border: none;
+    padding: 4px 18px;
+    border-radius: 24px;
     background-color: var(--quaternary);
     color: var(--secondary);
+    font-weight: 600;
     @include light-svg();
+  }
+}
+
+.header-dropdown-toggle {
+  .icon.btn.no-text.btn-flat:active {
+    background-image: none;
   }
 }
 
@@ -104,7 +114,7 @@ p {
 }
 
 .select-kit {
-  &.single-select.dropdown-select-box summary {
+  &.single-select.dropdown-select-box summary:not(.btn) {
     background-color: var(--primary-low);
     border-radius: 9px;
     &:hover {
@@ -120,7 +130,7 @@ p {
       color: var(--primary) !important;
       font-size: 14px;
       &.category-drop-header {
-        padding: 0px 13px;
+        padding: 10px 13px;
       }
       &:hover {
         background-color: var(--primary-300);
@@ -133,18 +143,26 @@ p {
   }
 }
 
-.nav-pills > li > a {
-  background: none;
-  border-radius: 9px;
-  font-size: 14px;
-}
-.nav-pills > li a.active,
-.nav-pills > li button.active,
-.nav-pills > li > a:hover,
-.nav-pills > li button:hover {
-  border-radius: 9px;
-  color: var(--primary);
-  background-color: var(--primary-300);
+// .nav-pills > li > a {
+//   background: none;
+//   border-radius: 9px;
+//   font-size: 14px;
+// }
+// .nav-pills > li a.active,
+// .nav-pills > li button.active,
+// .nav-pills > li > a:hover,
+// .nav-pills > li button:hover {
+//   :not(.action-list) {
+//     border-radius: 9px;
+//     color: var(--primary);
+//     background-color: var(--primary-300);
+//   }
+// }
+.nav-pills.action-list a {
+  span:hover,
+  &.active span {
+    background-color: transparent;
+  }
 }
 
 .d-header {
@@ -549,6 +567,7 @@ p {
   display: flex;
   flex-direction: column;
   align-content: center;
+  padding-bottom: 34px;
   &::before {
     content: "";
     position: absolute;
@@ -638,9 +657,84 @@ section.category-heading {
     width: 48px;
     height: 48px;
   }
+  .category-title-contents {
+    display: flex;
+    min-width: var(--d-max-width);
+    .category-banner-controls {
+      display: flex;
+      gap: 24px;
+      .install {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        color: var(--primary-700);
+        font-size: 14px;
+        &::after {
+          content: "";
+          display: block;
+          height: 14px;
+          width: 14px;
+          margin-left: 4px;
+          background-size: cover;
+          background-image: url($outlink-quaternary);
+        }
+      }
+      .btn-post {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 22px;
+        border-radius: 32px;
+        background-color: var(--quaternary);
+        color: var(--secondary);
+        font-size: 15px;
+        font-weight: 600;
+        max-height: 36px;
+        align-self: center;
+        text-wrap: nowrap;
+      }
+    }
+  }
 }
 
-h3.sidebar-heading {
+.topic-map {
+  background-color: transparent;
+  border: none;
+  .map {
+    border: none;
+    .buttons .btn {
+      background-color: transparent;
+      border: none;
+    }
+  }
+}
+
+.post-stream {
+  .topic-body .post-controls {
+    .actions {
+      margin-left: 0;
+      width: 100%;
+      button {
+        color: var(--primary-600);
+        svg {
+          stroke: var(--primary-600);
+          fill: var(--primary-600);
+        }
+      }
+      button.create {
+        margin-left: auto;
+        color: var(--primary-400);
+        font-weight: 700;
+        svg {
+          stroke: var(--primary-400);
+          fill: var(--primary-400);
+        }
+      }
+    }
+  }
+}
+
+.time h3.sidebar-heading {
   padding: 0;
   border: none;
   font-weight: 500;
@@ -673,7 +767,7 @@ h3.sidebar-heading {
 .category-resources {
   &-group {
     .group-title {
-      padding: 4px 0;
+      padding: 8px 0;
       font-size: 14px;
       font-weight: 600;
       button {
@@ -695,9 +789,10 @@ h3.sidebar-heading {
       gap: 4px;
       padding: 16px 16px;
       background-color: var(--primary-50);
+      margin: 7px 0;
       a {
         color: var(--primary);
-        font-size: 12px;
+        font-size: 13px;
         &:hover {
           display: flex;
           align-items: center;
@@ -743,6 +838,10 @@ h3.sidebar-heading {
       }
     }
   }
+}
+
+.tc-right-sidebar {
+  margin-top: 20px;
 }
 
 // ** Topic List Styles
@@ -795,10 +894,6 @@ h3.sidebar-heading {
   .category-boxes {
     grid-template-columns: 1fr 1fr;
   }
-}
-
-body.navigation-category * {
-  --d-max-width: 1300px;
 }
 
 // ** Development Styles
