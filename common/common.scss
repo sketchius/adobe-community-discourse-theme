@@ -348,6 +348,29 @@ p {
   }
 }
 
+body #main .discourse-root {
+  display: flex;
+  flex-direction: column;
+  .d-header-wrap {
+    order: -2;
+  }
+  .search-banner {
+    order: -1;
+  }
+  .featured-categories-wrapper {
+    h3 {
+      padding-left: var(--d-wrap-padding-h);
+      padding-right: var(--d-wrap-padding-h);
+    }
+    .featured-categories-slider-content {
+      padding: 0 var(--d-wrap-padding-h);
+    }
+  }
+}
+
+
+
+
 .featured-categories-wrapper {
   display: flex;
   flex-direction: column;
