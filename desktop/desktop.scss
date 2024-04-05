@@ -54,6 +54,10 @@
   }
 }
 
+body.navigation-topics #list-area {
+  width: 100%;
+}
+
 .list-controls .container {
   border-bottom: 2px solid var(--primary-200);
   .navigation-container {
