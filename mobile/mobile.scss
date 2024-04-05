@@ -179,7 +179,6 @@ nav.post-controls .actions .double-button {
   }
 }
 
-
 .resources {
   margin: 0 28px;
   .resource-card-group {
@@ -216,9 +215,31 @@ nav.post-controls .actions .double-button {
   }
 }
 
+body #main .discourse-root {
+  display: flex;
+  flex-direction: column;
+  .d-header-wrap {
+    order: -2;
+  }
+  .search-banner {
+    order: -1;
+  }
+  .featured-categories-wrapper {
+    h3 {
+      padding-left: var(--d-wrap-padding-h);
+      padding-right: var(--d-wrap-padding-h);
+    }
+    .featured-categories-slider-content {
+      padding: 0 var(--d-wrap-padding-h);
+    }
+  }
+}
+
 .mobile-category-stats {
   margin-bottom: 24px;
 }
+
+
 
 .custom-footer {
   &-inner {
