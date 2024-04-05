@@ -24,21 +24,39 @@ export default class FeaturedCategories extends Component {
     return this.position > 0;
   }
   get isRightArrowVisible() {
-    return this.position + 3 < this.categories.length;
+    const columns = this.getVisibileColumns();
+    return this.position + columns < this.categories.length;
   }
 
   @action
   moveLeft() {
-    this.position -= 3;
+    const columns = this.getVisibileColumns();
+    this.position -= columns;
     this.position = Math.max(this.position, 0);
-    this.transform = `transform: translateX(-${(this.position / 3) * 960}px);`;
+    this.transform = `transform: translateX(calc(${(-1 * this.position) / columns} * var(--featured-categories-width)));`;
   }
 
   @action
   moveRight() {
-    this.position += 3;
-    this.position = Math.min(this.position, this.categories.length - 3);
-    this.transform = `transform: translateX(-${(this.position / 3) * 960}px);`;
+    const columns = this.getVisibileColumns();
+    this.position += columns;
+    this.position = Math.min(this.position, this.categories.length - columns);
+    this.transform = `transform: translateX(calc(${(-1 * this.position) / columns} * var(--featured-categories-width)));`;
+  }
+
+  getVisibileColumns() {
+    const element = document.querySelector(
+      ".featured-categories-wrapper .featured-categories",
+    );
+    const style = getComputedStyle(element);
+    try {
+      return parseInt(
+        style.getPropertyValue("--featured-categories-columns"),
+        10,
+      );
+    } catch {
+      return 1;
+    }
   }
 
   async loadFeaturedCategories() {

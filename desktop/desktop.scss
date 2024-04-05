@@ -25,7 +25,8 @@
   display: block;
 }
 
-.mobile-category-stats {
+.mobile-category-stats,
+.mobile-category-resources {
   display: none;
 }
 
@@ -170,6 +171,20 @@ body.navigation-category * {
   margin-right: auto;
   margin-left: auto;
   padding: 0 var(--d-wrap-padding-h);
+  .featured-categories {
+    // Breaks the component into 3, 2, or 1 columns depending on screen width
+    --featured-categories-width: 960px;
+    --featured-categories-columns: 3;
+    width: var(--featured-categories-width);
+    @media screen and (width < 1025px) {
+      --featured-categories-width: 640px;
+      --featured-categories-columns: 2;
+    }
+    @media screen and (width < 675px) {
+      --featured-categories-width: 320px;
+      --featured-categories-columns: 1;
+    }
+  }
 }
 
 #main-outlet .list-container .topic-list tbody {
@@ -191,8 +206,90 @@ body.navigation-category * {
   }
 }
 
-@media (width < 1200px) {
+@media screen and (width < 1200px) {
   .resource-card {
     background-image: none !important;
+  }
+  body.navigation-categories section.navigation-container {
+    display: flex;
+  }
+  .mobile-category-stats {
+    display: block;
+    margin-bottom: 24px;
+  }
+  .tc-right-sidebar {
+    display: none;
+    & + #list-area {
+      width: 100%;
+    }
+  }
+  #list-area {
+    margin-bottom: 60px;
+  }
+  .mobile-category-resources {
+    display: block;
+    border-left: 2px solid var(--primary-200);
+    padding-left: 12px;
+  }
+}
+
+@media screen and (width < 675px) {
+  // Use mobile appearance at this width
+  .search-banner .custom-search-banner .custom-search-banner-wrap {
+    h1 {
+      font-size: 30px;
+      margin-top: 4px;
+    }
+    .search-menu {
+      width: 300px;
+      .search-icon .d-icon-search {
+        font-size: 20px;
+      }
+    }
+    .search-input {
+      input#search-term[type="text"] {
+        height: 50px;
+        border-radius: 32px;
+      }
+      .searching {
+        top: 25%;
+      }
+    }
+    .custom-stats {
+      display: none;
+    }
+  }
+  #main .category-title-header {
+    background-color: var(--primary-50) !important;
+    color: var(--primary) !important;
+    font-size: 14px;
+    width: 100%;
+    .category-logo {
+      margin: 0;
+      img {
+        width: 48px;
+        height: 48px;
+      }
+    }
+    .category-title-contents {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      min-width: 100%;
+      .category-title {
+        flex-direction: column;
+        gap: 14px;
+        font-size: 20px;
+        align-self: center;
+        align-items: center;
+      }
+      .category-banner-controls {
+        gap: 12px;
+        margin: 0;
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+    }
   }
 }
